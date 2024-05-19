@@ -34,6 +34,7 @@ deploy:
   script:
     - echo "Starting deploy stage"
     - npm install -g now
-    - now --token=$NOW_TOKEN --public
+    - now login --token=$NOW_TOKEN 
+    - now --public
   only:
     - main
