@@ -36,4 +36,4 @@ deploy:
     - npm install -g now
     - now --token=$NOW_TOKEN --public
   only:
-    - master
+    - main
