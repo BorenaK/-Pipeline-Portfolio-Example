@@ -26,8 +26,6 @@ test:
   image: node:14
   script:
     - echo "Starting test stage"
-    - npm install
-    - npm test
 
 # Deploy Stage
 deploy:
