@@ -1,0 +1,14 @@
+{
+    "name": "pipeline-portfolio-example",
+    "version": "1.0.0",
+    "description": "Pipeline Example",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "build": "echo 'Building...'"
+    },
+    "author": "PortfolioExample",
+    "license": "MIT",
+    "dependencies": {}
+  }
+  

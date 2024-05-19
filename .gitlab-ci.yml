@@ -1,0 +1,41 @@
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+  # DEfine variables
+  NODE_ENV: "development"
+
+# Build Stage
+build:
+  stage: build
+  image: node:14
+  script:
+    - echo "Starting build stage"
+    - npm install  #install project dependencies
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+    expire_in: 1 day
+
+# Test Stage
+test:
+  stage: test
+  image: node:14
+  script:
+    - echo "Starting test stage"
+    - npm install
+    - npm test
+
+# Deploy Stage
+deploy:
+  stage: deploy
+  image: node:14
+  script:
+    - echo "Starting deploy stage"
+    - npm install -g now
+    - now --token=$NOW_TOKEN --public
+  only:
+    - master
